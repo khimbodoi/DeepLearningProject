@@ -1,0 +1,42 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and operating system
+.vs/
+.vscode/
+.idea/
+/pyrefly.toml
+.DS_Store
+Thumbs.db
+
+# Local datasets (including directory links)
+/data
+/animal
+/cifar-10-batches-py
+/cifar-10-python.tar.gz
+/full_numpy_bitmap_*.npy
+/test_images/
+
+# Experiment outputs
+/checkpoints*/
+/tensorboard_log/
+/trained_models/
+*.pt
+*.pth
+*.ckpt
+events.out.tfevents.*
+
+# Credentials and personal CV assets
+.env
+.env.*
+!.env.example
+/avatar.jpg
+/CV_ToNgocGiaKhiem.html
+/generate_cv.py
