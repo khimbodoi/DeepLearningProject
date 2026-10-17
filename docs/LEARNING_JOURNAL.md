@@ -13,14 +13,22 @@ Bản tổng hợp này được viết từ nội dung code hiện có. Các m�
 | 07 · MLP | Flatten ảnh RGB 32×32, các lớp 512 → 256 → 10 | Vì sao đầu ra là 10 logits, và flatten làm mất thông tin không gian gì? |
 | 08 · Train & evaluate | Import mô hình bài 7, Adam, CrossEntropyLoss, classification report | Lớp nào có recall thấp và có thể bị nhầm với lớp nào? |
 | 09 · ResNet draft | Bottleneck 1×1 → 3×3 → 1×1, residual và downsample | Hai nhánh cần cùng shape ra sao trước khi cộng? Bản này còn cần hoàn thiện trước khi chạy. |
-| 10 · CNN workflow | Năm conv blocks, BatchNorm, Dropout, logs và checkpoint | So sánh best/last checkpoint thế nào? Cần tách validation trước khi chọn mô hình bằng test. |
+| 10 · CNN workflow | Năm conv blocks, augmentation, confusion matrix, TensorBoard và resume checkpoint | So sánh best/last checkpoint thế nào? Cần tách validation trước khi chọn mô hình bằng test. |
+| 11 · CNN inference | Nạp trọng số bài 10, đọc ảnh OpenCV, chuyển RGB/CHW, softmax và hiển thị dự đoán | Tiền xử lý có khớp lúc train không? Xác suất softmax có phản ánh độ tin cậy không? |
 
 ## Trạng thái bằng chứng
 
-- Có 10 file bài thực hành để đọc và đối chiếu trực tiếp.
+- Có 11 file bài thực hành để đọc và đối chiếu trực tiếp.
 - Bài 9 là bản phác thảo chưa hoàn chỉnh.
 - Chưa lưu bảng metric hoặc thông tin môi trường được kiểm chứng trong tài liệu này.
 - Mục tiêu tiếp theo: ghi lại thực nghiệm thật, thay vì chỉ liệt kê công cụ đã dùng.
+
+## Mốc cập nhật · 2026-10-17
+
+- Bài 10 thêm lật ngang ngẫu nhiên khi train, biểu đồ confusion matrix và lưu trạng thái optimizer để tiếp tục huấn luyện.
+- Bài 11 đưa mô hình đã học vào luồng dự đoán một ảnh mới.
+- Launcher TensorBoard chuyển sang thư mục `tensorboard/`.
+- Đây là ngày ghi nhận phiên bản trong repo; chưa bổ sung metric hay xác nhận chạy huấn luyện/inference thành công.
 
 ## Mẫu ghi chép cho lần thực hành tiếp theo
 

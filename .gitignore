@@ -27,6 +27,7 @@ Thumbs.db
 # Experiment outputs
 /checkpoints*/
 /tensorboard_log/
+/tensorboard/
 /trained_models/
 *.pt
 *.pth
